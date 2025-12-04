@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Técnico - Reservas y trabajos</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Estilos globales -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar móvil -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="img/LOGO.png" alt="CAMSEG" width="36" height="36">
+                <span class="brand-text ms-2">Técnico CAMSEG</span>
+            </a>
+            <a href="index.html" class="btn btn-sm btn-outline-light">
+                <i class='bx bx-log-out'></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="content">
+        <div class="container-fluid">
+
+            <!-- Reservas asignadas (lista) -->
+            <div class="mb-3">
+                <h5 class="fw-bold mb-2">Reservas asignadas</h5>
+                <div class="card fade-in mb-2">
+                    <div class="card-body small">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <strong>Cliente:</strong> Juan Pérez<br>
+                                <strong>Fecha:</strong> 20/11/2025 - 10:00 AM<br>
+                                <strong>Ubicación:</strong> Calle 123, Col. Centro
+                            </div>
+                            <span class="badge-soft badge-primary align-self-start">Pendiente</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100 mt-2">
+                            <i class='bx bx-edit-alt me-1'></i> Abrir trabajo
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card fade-in mb-2">
+                    <div class="card-body small">
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <strong>Cliente:</strong> Empresa XYZ<br>
+                                <strong>Fecha:</strong> 22/11/2025 - 3:00 PM<br>
+                                <strong>Ubicación:</strong> Parque Industrial, Bodega 5
+                            </div>
+                            <span class="badge-soft badge-success align-self-start">En curso</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm w-100 mt-2">
+                            <i class='bx bx-edit-alt me-1'></i> Abrir trabajo
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario registro de trabajo realizado -->
+            <div class="card fade-in">
+                <div class="card-header">
+                    Registro del trabajo realizado
+                </div>
+                <div class="card-body">
+                    <form class="small">
+                        <div class="mb-2">
+                            <label class="form-label">Nombre del cliente</label>
+                            <input type="text" class="form-control" placeholder="Nombre cliente">
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <label class="form-label">Fecha</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="col-6">
+                                <label class="form-label">Hora</label>
+                                <input type="time" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-2 mt-2">
+                            <label class="form-label">Ubicación</label>
+                            <textarea class="form-control" rows="2" placeholder="Dirección exacta"></textarea>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Equipo / cámaras / accesorios</label>
+                            <textarea class="form-control" rows="2" placeholder="Ej: 4 cámaras, DVR 8ch, fuentes, cableado..."></textarea>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Cómo lo encontraste / observaciones</label>
+                            <textarea class="form-control" rows="3" placeholder="Describe el estado en que lo encontraste..."></textarea>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label">Trabajo realizado</label>
+                            <textarea class="form-control" rows="3" placeholder="Describe los arreglos y acciones que realizaste..."></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Fotos del trabajo (antes / después)</label>
+                            <input type="file" class="form-control" multiple accept="image/*">
+                            <div class="form-text">
+                                El técnico puede tomar fotos desde el teléfono (demo, no se guardan todavía).
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary w-100">
+                            <i class='bx bx-save me-1'></i> Guardar reporte (demo)
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
